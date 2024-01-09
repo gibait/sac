@@ -1,0 +1,27 @@
+<html>
+    <link rel="stylesheet" href="/static/color.css">
+    <body>
+
+        <form method="POST">
+            <table>
+                <tr><td>{{addForm.id.label}}</td><td>{{addForm.id}}</td></tr>
+                <tr><td>{{addForm.message.label}}</td><td>{{addForm.message}}</td></tr>
+                <tr><td></td><td>{{addForm.submit1}}</td></tr>
+            </table>
+        </form>
+        {% if error is defined %}
+            <li>Inserimento non riuscito</li>
+        {% endif %}
+
+        {% if success is defined %}
+            <li>Inserimento riuscito</li>
+        {% endif %}
+
+        <form method="POST">
+            <table>
+                <tr><td>{{searchForm.hashtag.label}}</td><td>{{searchForm.hashtag}}</td></tr>
+                <tr><td></td><td>{{searchForm.submit2}}</td></tr>
+            </table>
+        </form>
+    </body>
+</html>

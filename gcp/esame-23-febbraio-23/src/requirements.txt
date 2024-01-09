@@ -1,0 +1,8 @@
+flask
+flask-restful
+WTForms
+requests
+google-cloud-firestore
+gunicorn
+python-dateutil
+google-cloud-pubsub

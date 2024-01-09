@@ -1,0 +1,10 @@
+<h1>Lista dei messaggi con l'hashtag {{hashtag}}</h1>
+
+{% for c in chirps %}
+<dl>
+    <dd>Messaggio nr. {{c['id']}}</dd>
+    <dt>    Testo: {{c['message']}}</dt>
+    <dt>    Timestamp: {{c['timestamp']}}</dt>
+    <br>
+</dt>
+{% endfor %}
