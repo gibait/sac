@@ -1,0 +1,12 @@
+h1.hello{
+        color: teal;
+        font-family: sans-serif;
+}
+
+h1.error{
+        color: red;
+}
+
+thead.active, tr.active{
+        color:red;
+}

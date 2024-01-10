@@ -1,0 +1,29 @@
+<table style="text-align: center;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>IP</th>
+            <th>Netmask</th>
+            <th>Gateway</th>
+            <th>Device</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for route in routing_table %}
+        <tr style="{{ 'color:red' if selected == route.id else '' }}">
+            <td>{{ route.id }}</td>
+            <td>{{ route.ip }}</td>
+            <td>{{ route.netmaskCIDR }}</td>
+            <td>{{ route.gw }}</td>
+            <td>{{ route.device }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<form method="POST">
+    <table>
+        <tr><td>{{form.ip.label}}</td><td>{{form.ip}}</td></tr>
+        <tr><td></td><td>{{form.submit}}</td></tr>
+    </table>
+</form>
